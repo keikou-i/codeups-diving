@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-top-about {
+    margin-block: rem(82) rem(74);
+
+    @include mq(md) {
+        margin-block: rem(139) rem(164);
+    }
+}

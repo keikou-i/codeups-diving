@@ -1,0 +1,71 @@
+@use "global" as *;
+
+/* 位置のreset */
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================
+ナビゲーションボタン
+============================= */
+/* デフォルトのボタンを初期化 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: ""; /* デフォルトのものを初期化 */
+}
+
+/* 各ボタンのカスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    @include mq(md) {
+        bottom: calc(100% + rem(25));
+        width: rem(80);
+        height: rem(80);
+    }
+}
+.swiper-button-prev {
+    @include mq(md) {
+        right: rem(340);
+    }
+}
+.swiper-button-next {
+    @include mq(md) {
+        right: rem(180);
+    }
+}
+
+/* =============================
+ページネーション (bullets)
+============================= */
+/* 位置の設定 (枠組み) */
+// .swiper-pagination-bullets.swiper-pagination-horizontal {
+//     top: calc(100% + 30px);
+//     left: 0;
+//     text-align: left;
+// }
+
+// /* それぞれのページネーション */
+// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+//     opacity: 1;
+//     width: 40px;
+//     height: 5px;
+//     // aspect-ratio: 1;
+//     border-radius: 0;
+//     background: #d9d9d9;
+//     margin-inline: calc(11px / 2);
+// }
+// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet:first-of-type {
+//     margin-left: 0;
+// }
+
+// /* activeな部分 */
+// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+//     background: #000;
+// }

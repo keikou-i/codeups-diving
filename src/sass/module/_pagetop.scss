@@ -1,0 +1,35 @@
+@use "global" as *;
+
+/* トップへ戻るボタン
+***************************************************************/
+.pagetop {
+    position: fixed; // 位置固定
+    right: rem(15);
+    bottom: rem(16);
+    width: min(calc(48 / 375 * 100%), rem(48)); // レスポンシブを考慮
+    // https://coliss.com/articles/build-websites/operation/css/css-about-min-max-clamp.html
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 99;
+
+    @include mq(md) {
+        right: rem(20);
+        bottom: rem(20);
+        width: rem(80);
+    }
+}
+
+.pagetop.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pagetop img {
+    // width: rem(48);
+
+    // @include mq(md) {
+    //     width: rem(80);
+    // }
+}

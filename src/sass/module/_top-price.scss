@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.top-price {
+    background-color: $green2;
+    margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
+    padding-block: rem(80) rem(84);
+    position: relative;
+
+    @include mq(md) {
+        padding-block: rem(97) rem(104);
+    }
+}
+
+.top-price__fish {
+    @include mq(md) {
+        position: absolute;
+        // width: min(100%, rem(437));
+        width: min(calc(437 / 1440 * 100%), rem(437));
+        bottom: rem(60);
+        left: calc(50% - min(44vw, rem(620)));
+    }
+}
+.top-price__fish img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-price__inner {
+    padding-inline: rem(15);
+
+    @include mq(md) {
+        padding-inline: rem(30); // 適当値
+    }
+}
+
+.top-price__title {
+}
+
+.top-price__container {
+    margin-block-start: rem(28);
+
+    @include mq(md) {
+        margin-block-start: rem(40);
+    }
+}
+
+.top-price__button {
+    margin-block-start: rem(40);
+    text-align: center;
+    padding-inline-end: rem(3); // ピクパ用
+
+    @include mq(md) {
+        margin-block-start: rem(80);
+    }
+}

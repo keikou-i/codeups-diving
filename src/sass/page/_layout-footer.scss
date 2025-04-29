@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-footer {
+    margin-block-start: rem(104);
+
+    @include mq(md) {
+        margin-block-start: rem(160);
+    }
+}

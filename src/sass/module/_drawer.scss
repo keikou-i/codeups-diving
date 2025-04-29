@@ -1,0 +1,158 @@
+@use "global" as *;
+
+// ハンバーガーアイコン
+.drawer__icon {
+    position: fixed;
+    top: rem(28);
+    right: rem(15);
+    width: rem(32);
+    height: rem(25);
+    padding: 0; // おそらく<button>タグにpaddingがあったので、クリアする。
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 102;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.drawer__icon--bar {
+    width: 100%;
+    height: rem(1);
+    background-color: $white;
+    transition: all 0.3s ease;
+}
+
+// ドロワーメニューが開いているとき
+.drawer__icon.js-show {
+    .drawer__icon--bar:nth-of-type(1) {
+        rotate: 38deg;
+        // translate: 0 rem(12);
+        translate: -3px rem(12); // 苦肉の策。
+    }
+
+    .drawer__icon--bar:nth-of-type(2) {
+        display: none;
+    }
+
+    .drawer__icon--bar:nth-of-type(3) {
+        rotate: -38deg;
+        // translate: 0 rem(-12);
+        translate: -3px rem(-12); // 苦肉の策。
+    }
+
+    // 苦肉の策。閉じる（×）アイコン時のライン長さを伸ばすため。
+    .drawer__icon--bar:nth-of-type(1),
+    .drawer__icon--bar:nth-of-type(3) {
+        width: 120%;
+    }
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    // width: 278px;
+    width: 100%;
+
+    height: 100vh;
+    height: 100svh;
+    background-color: $accent;
+    overflow-y: scroll;
+
+    z-index: 100;
+
+    // translate: 101%; // 右側に隠す
+    opacity: 0;
+    visibility: hidden;
+
+    // transition: translate 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.drawer.js-show {
+    // translate: 0; // 左側に移動（表示する）
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer__body {
+    width: 100%;
+    height: fit-content; // 自身の高さが子要素の高さと同じ値になる
+    padding-block: rem(104) rem(111);
+}
+
+.drawer__inner {
+    display: flex;
+    // justify-content: space-between;
+    gap: rem(29);
+
+    width: min(100%, rem(375));
+    padding-inline: rem(37);
+    margin-inline: auto;
+}
+
+.drawer__left {
+}
+
+.drawer__right {
+}
+
+.drawer__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(18); // TODO ？　なぜカンプの値より大きく離れる？
+    // margin-bottom: 40px;
+
+    position: relative;
+}
+
+.drawer__list:nth-of-type(n+2) {
+    margin-block-start: rem(34);
+}
+
+.drawer__list a {
+    color: #fff;
+    font-size: rem(16);
+    // font-size: 16px;
+    font-weight: $normal;
+    line-height: calc(18 / 16);
+    letter-spacing: 0;
+    font-family: $second-font-family;
+}
+
+.drawer__list li:nth-of-type(1) a {
+    font-weight: $bold;
+}
+
+.drawer__list li:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    width: rem(18);
+    height: rem(18);
+    top: 0;
+    left: rem(-22);
+    background-image: url(../images/common/starfish.svg);
+}
+
+// 「プライバシー」と「ポリシー」の間隔を調整する
+.drawer__list br {
+    display: block;
+    content: "";
+    margin-top: rem(-6);
+}
+
+// .drawer__btn {
+//     display: inline-block;
+//     padding: 6px 30px;
+//     background-color: #fff;
+//     border-radius: 100vmax;
+//     font-size: 20px;
+//     font-weight: 400;
+//     line-height: normal;
+// }

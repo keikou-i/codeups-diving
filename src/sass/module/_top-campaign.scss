@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.top-campaign {
+    margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
+}
+
+.top-campaign__inner {
+    position: relative;
+}
+
+.top-campaign__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-campaign__container {
+    margin-block-start: rem(24);
+
+    @include mq(md) {
+        margin-block-start: 0; // リセット
+    }
+}
+
+.top-campaign__button {
+    margin-block-start: rem(30);
+    text-align: center;
+    padding-inline-end: rem(5);
+
+    @include mq(md) {
+        margin-block-start: rem(70);
+        padding-inline-end: rem(4);
+    }
+}

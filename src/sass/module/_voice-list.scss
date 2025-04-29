@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.voice-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+
+    @include mq(md) {
+        // サブグリッド【親】
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: normal; // subgridに影響するのでリセットする
+        column-gap: rem(40);
+    }
+}
+
+.voice-list__voice {
+    @include mq(md) {
+        // まずは【子】のサブグリッド化（※最終的には【】をサブグリッドで揃える）
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 2; // 最終的に高さを揃えたい要素の数
+        gap: 0;
+    }
+}
+// ３カード目以降は、上部余白を付ける（subgridがあるので、column-gapなどは使わなかった）
+.voice-list__voice:nth-of-type(n + 3) {
+    margin-block-start: rem(40);
+}
+
+@media (any-hover: hover) {
+    .voice-list__voice:hover {
+        background-color: $hover;
+    }
+    .voice-list__voice:hover .voice__link {
+        background-color: $hover;
+    }
+}

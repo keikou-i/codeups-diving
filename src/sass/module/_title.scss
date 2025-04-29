@@ -1,0 +1,157 @@
+@use "global" as *;
+
+.title {
+    text-align: center;
+}
+
+.title__en {
+    // display: inline-block;
+    font-size: rem(32);
+    line-height: calc(39 / 32);
+    // letter-spacing: 0;
+    color: $font;
+    font-weight: $normal;
+    padding-inline-end: rem(2); // ピクパ用
+
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+.title__en::first-letter {
+    color: $accent;
+}
+
+.title__ja {
+    // display: inline-block;
+    font-size: rem(12);
+    line-height: calc(18 / 12);
+    // letter-spacing: 0;
+    color: $accent;
+    font-family: $second-font-family;
+    margin-block-start: rem(4.5);
+    padding-inline-end: rem(4); // ピクパ用
+
+    @include mq(md) {
+        margin-block-start: rem(3.5);
+        padding-inline-end: rem(3); // ピクパ用
+    }
+}
+
+.title__en--white,
+.title__ja--white {
+
+    @include mq(md) {
+        color: $white;
+    }
+}
+// .title__en--white,
+// .title__ja--white {
+//     color: $white;
+// }
+
+// .title__white .title__en::first-letter {
+//     color: $green2;
+// }
+.title__en--white::first-letter {
+    @include mq(md) {
+        color: $green2;
+    }
+}
+
+// .title__shadow {
+//     text-shadow: 0 rem(2) rem(2) #808080
+// }
+
+.title__en.title__en--contact {
+    font-size: rem(80);
+    line-height: calc(80 / 80);
+}
+.title__ja.title__ja--contact {
+    font-size: rem(12);
+    margin-top: rem(-7);
+    font-weight: $normal;
+}
+
+.title__en.title__en--voice {
+    padding-inline-end: 0; // ピクパ用
+
+    @include mq(md) {
+        // padding-inline-end: rem(0); // ピクパ用
+    }
+}
+.title__ja.title__ja--voice {
+    padding-inline-end: 0; // ピクパ用
+
+    @include mq(md) {
+        padding-inline-end: rem(1); // ピクパ用
+    }
+}
+
+.title__en.title__en--information {
+    padding-inline-end: rem(0); // ピクパ用
+
+    @include mq(md) {
+        padding-inline-end: rem(6); // ピクパ用
+    }
+}
+.title__ja.title__ja--information {
+    margin-block-start: rem(5); // ピクパ用
+    padding-inline-start: rem(2); // ピクパ用
+
+    @include mq(md) {
+        margin-block-start: rem(3); // ピクパ用
+        padding-inline-start: 0; // リセット
+        padding-inline-end: rem(6); // ピクパ用
+    }
+}
+
+.title__en.title__en--price {
+    padding-inline-end: rem(1); // ピクパ用
+
+    @include mq(md) {
+        padding-inline-end: rem(6); // ピクパ用
+    }
+}
+.title__ja.title__ja--price {
+    margin-block-start: rem(5); // ピクパ用
+    padding-inline-start: rem(2); // ピクパ用
+
+    @include mq(md) {
+        margin-block-start: rem(4); // ピクパ用
+        padding-inline-start: 0; // リセット
+        padding-inline-end: rem(6); // ピクパ用
+    }
+}
+
+.title__en.title__en--about {
+    padding-inline-start: rem(4); // ピクパ用
+
+    @include mq(md) {
+        padding-inline-start: rem(20); // ピクパ用
+    }
+}
+.title__ja.title__ja--about {
+    margin-block-start: rem(5); // ピクパ用
+    padding-inline-start: rem(5); // ピクパ用
+
+    @include mq(md) {
+        margin-block-start: rem(3); // ピクパ用
+        padding-inline-start: rem(19);
+    }
+}
+
+.title__en.title__en--campaign {
+    padding-inline-start: rem(2); // ピクパ用
+
+    @include mq(md) {
+        // padding-inline-start: rem(2); // ピクパ用
+    }
+}
+.title__ja.title__ja--campaign {
+    padding-inline-end: 0; // ピクパ用
+
+    @include mq(md) {
+        // padding-inline-start: rem(2); // ピクパ用
+    }
+}

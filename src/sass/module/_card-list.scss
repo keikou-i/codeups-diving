@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: normal; // subgridに影響するのでリセットする
+    }
+}
+
+.card-list__card {
+    // @include mq(md) {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 4; // 孫要素の数
+        gap: 0;
+    // }
+}
+// ４カード目以降は、上部余白を付ける（subgridがあるので、column-gapなどは使わなかった）
+.card-list__card:nth-of-type(n + 4) {
+    margin-block-start: rem(40);
+}
+
+// .card-list__card,
+// .card__link {
+//     display: grid;
+//     grid-template-rows: subgrid;
+//     grid-row: span 4; // 孫要素の数
+//     gap: rem(12); // 孫要素の間隔
+// }
+
+// .card-list__item {
+//     max-width: calc(33.3333% - rem(25) * 2 / 3);
+//     width: 100%;
+// }
+
+// .card-list__item + .p-card-list__item {
+//     margin-inline-start: rem(25);
+// }
+
+// .card-list__item:nth-child(3n + 1) {
+//     margin-inline-start: 0;
+// }
+
+// .card-list__item:nth-child(n + 4) {
+//     margin-block-start: rem(25);
+// }
+
+@media (any-hover: hover) {
+    .card-list__card:hover {
+        background-color: $hover;
+    }
+    .card-list__card:hover .card__link {
+        background-color: $hover;
+    }
+    .card-list__card:hover .card__image img {
+        // .card-list__card:hover .card__image {
+        // transform: scale(1.1);
+        scale: 1.1;
+    }
+}
