@@ -31,12 +31,9 @@
         width: calc(492 / 1077 * 100%);
     }
 }
-// .price__wrap:nth-of-type(2) {
 .price__image-wrap {
     position: relative; // アニメーション用
 }
-// .price__wrap:nth-of-type(2) div.color {
-// .price__image div.color {
 .price__image-wrap div.color {
     // アニメーション用
     position: absolute;
@@ -118,10 +115,4 @@
 
     @include mq(md) {
     }
-}
-
-.price__menu {
-}
-
-.price__price {
 }

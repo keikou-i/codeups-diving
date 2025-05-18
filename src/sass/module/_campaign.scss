@@ -1,8 +1,5 @@
 @use "global" as *;
 
-/* ================================
-見た目を整えるCSS
-=============================== */
 .campaign {
     overflow: hidden; // 水平スクロールバーを消すために必要
     padding-block-start: rem(90); // 24+66
@@ -15,38 +12,25 @@
 }
 
 .campaign__inner {
-    // width: min(calc(840px + 20px * 2), 100%);
-    // width: min(100%, rem(1080));
-    // width: min(100%, rem(1260)); // 1080+180
     width: 100%;
-    // padding-inline: 20px;
-    // margin-inline: auto;
     position: relative;
 }
 
 .campaign__swiper-slide {
     display: flex;
-    // align-items: center;
     align-items: flex-start; // カードを上揃えにする
     justify-content: center;
     width: rem(280);
     height: auto;
-    // height: 100%; // 各々カードの高さを揃えるため
-    // aspect-ratio: 280 / 366;
-    // background: #d9d9d9;
     box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
     margin-block-end: rem(10); // 底辺の影を見せるため
     margin-inline-start: rem(10); // 左端の左辺の影を見せるため
 
     @include mq(md) {
         width: rem(333);
-        // aspect-ratio: 333 / 445;
     }
 }
 
-/* ================================
-本題のCSS
-=============================== */
 .campaign__swiper-container,
 .campaign__swiper,
 .campaign__swiper-wrapper,
@@ -56,11 +40,4 @@
 
 .campaign__swiper {
     overflow: visible;
-    // height: auto; // 各々カードの高さを揃えるため
-    // height: 100%; // 各々カードの高さを揃えるため
-}
-
-.campaign__swiper-wrapper {
-    // height: auto; // 各々カードの高さを揃えるため
-    // height: 100%; // 各々カードの高さを揃えるため
 }

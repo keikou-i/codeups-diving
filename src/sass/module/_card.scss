@@ -12,27 +12,14 @@
     }
 }
 
-// .card__link {
-//     // display: block;
-//     // display: grid; // CU
-//     // grid-template-rows: auto 1fr; // CU
-//     // height: 100%; // CU
-// }
 .card__link {
-    // @include mq(md) {
-        display: grid;
-        grid-template-rows: subgrid;
-        grid-row: span 4; // 孫要素の数
-        gap: 0; // 孫要素の間隔
-        background-color: $white;
-        transition: background-color 0.3s;
-    // }
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4; // 孫要素の数
+    gap: 0; // 孫要素の間隔
+    background-color: $white;
+    transition: background-color 0.3s;
 }
-
-// 苦肉の策　pictureタグのクラスではspの時、overflow: hidden;が効かなかったので。
-// .card__frame {
-//     overflow: hidden;
-// }
 
 .card__image {
     // 苦肉の策　spの時、overflow: hidden;があると画像が消えてしまうため...
@@ -46,7 +33,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transition: transform 0.5s;
     transition: scale 0.5s ease;
 }
 
@@ -66,12 +52,8 @@
     border-bottom: solid rem(1) $accent;
     padding-block-end: rem(3.4);
 
-    // margin-block-end: auto; // CU
-
     @include mq(md) {
         align-self: auto; //
-        // padding-block-end: 0;
-        // line-height: 1;
     }
 }
 
@@ -82,52 +64,6 @@
     line-height: calc(24 / 16);
     font-family: $second-font-family;
 
-    // margin-block-end: auto; // CU
-
     @include mq(md) {
-        // margin-block-start: 0;
     }
 }
-
-// .card__body {
-//     padding: rem(4) rem(24) rem(16);
-//     background-color: $white;
-
-//     display: flex; // CU
-//     flex-direction: column; // CU
-// }
-
-// .card__meta {
-//     margin-block-start: rem(10);
-//     display: flex;
-//     justify-content: space-between;
-//     gap: rem(12);
-//     align-items: center;
-// }
-
-// .card__categories {
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: rem(4);
-// }
-
-// .card__category {
-//     background-color: #FFEA2E;
-//     padding: rem(6) rem(5);
-//     line-height: 1;
-
-//     width: fit-content;
-//     height: fit-content;
-//     border: 1px solid #AFAFAF;
-// }
-
-// @media (any-hover: hover) {
-//     .card:hover {
-//         background-color: $hover;
-//     }
-//     .card:hover .card__link {
-//         background-color: $hover;
-//     }
-//     .card:hover .card__image {
-//     }
-// }

@@ -11,17 +11,11 @@
 }
 
 .top-information__inner {
-    // margin-inline: auto;
     padding-inline: rem(15);
 
     @include mq(md) {
-        // padding-inline: rem(180);
         padding-inline: rem(30); // 適当値
-        // margin-inline: auto;
     }
-}
-
-.top-information__title {
 }
 
 .top-information__container {
@@ -29,6 +23,5 @@
 
     @include mq(md) {
         margin-block-start: rem(40);
-        // max-width: rem(1080);
     }
 }

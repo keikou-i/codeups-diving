@@ -16,9 +16,7 @@
     @include mq(md) {
         position: absolute;
         width: min(100%, rem(194));
-        // width: min(calc(194 / 1440 * 100%), rem(194));
         bottom: rem(-90);
-        // right: calc(50% - min(39vw, rem(637))); // -83
         right: calc(50% - min(45vw, rem(637))); // -83
     }
 }
@@ -28,16 +26,12 @@
 }
 
 .top-about__inner {
-    // margin-inline: auto;
     padding-inline: rem(14) rem(16);
 
     @include mq(md) {
         padding-inline: 0; // リセット
         max-width: rem(1080); // 880+200
     }
-}
-
-.top-about__title {
 }
 
 .top-about__container {

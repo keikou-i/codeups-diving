@@ -28,8 +28,6 @@
     background-color: $accent;
 }
 
-.information__image {
-}
 .information__image img {
     aspect-ratio: 345 / 227;
     width: 100%;
@@ -39,7 +37,6 @@
     @include mq(md) {
         aspect-ratio: 540 / 356;
         max-width: rem(540);
-        // margin-inline: auto;
     }
 }
 
@@ -54,9 +51,6 @@
         padding-block-end: rem(4); // ピクパ用
         padding-inline-start: rem(1); // ピクパ用
     }
-}
-
-.information__container {
 }
 
 .information__title {
@@ -87,11 +81,9 @@
 }
 
 .information__button {
-    // margin-block-start: rem(40);
     padding-inline-end: rem(4); // ピクパ用
     text-align: center;
 
     @include mq(md) {
-        // margin-block-start: 0; // リセット
     }
 }

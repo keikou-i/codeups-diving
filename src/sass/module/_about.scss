@@ -8,55 +8,38 @@
 
 .about__image-wrap {
     position: relative; // 魚の写真の基点
-    // height: 56.533%; // (194 + 18) / 375 * 100%
-    // height: 300px; // test
     aspect-ratio: 345 / 212; // 幅375-(14+16) 高さ(194 + 18)
 
     @include mq(md) {
         aspect-ratio: 1080 / 661; // 幅(880+200) 高さ(581+80)
-        // max-width: rem(1080);
         padding-inline-start: rem(10); // ピクパ用
     }
 }
 
-.about__image-shisa {
-}
 .about__image-shisa img {
     aspect-ratio: 128 / 194;
-    // width: min(100%, rem(128));
-    // max-width: rem(128);
     width: 37.1%; // 128/345
-    // height: 100%;
     height: auto;
 
     @include mq(md) {
         aspect-ratio: 400 / 606;
-        // width: 37.03%; // 400/1080
         width: 37.5%; // ピクパ用に調整
     }
 }
 
 .about__image-fish {
     position: absolute;
-    // top: rem(26);
-    // top: 12.26%; // 26/212  (186+26)
     top: 12.5%; // 26/212  (186+26)
-    // left: rem(64);
     left: 18.55%; // 64/345
     z-index: -1;
     width: 81.44%; // 281/345
-    // height: auto;
 
     @include mq(md) {
         top: 12.1%; // 80/661
-        // left: 18.51%; // 200/1080
         left: 19.5%; // ピクパ用に調整
     }
 }
 .about__image-fish img {
-    // width: min(100%, rem(281));
-    // max-width: rem(281);
-    // width: 81.44%; // 281/345
     height: 100%;
 
     @include mq(md) {
@@ -74,7 +57,6 @@
         position: absolute;
         margin-block-start: 0; // リセット
         top: 30.25%; // 200/661
-        // left: 18.42%; // 199/1080
         left: 19.3%; // ピクパ用に調整
 
         flex-direction: row;
@@ -92,13 +74,9 @@
 
     @include mq(md) {
         color: $white;
-        // font-size: rem(80);
         font-size: clamp(2.5rem, 1.62rem + 3.76vw, 5rem);
         line-height: calc(100 / 80);
     }
-}
-
-.about__message-wrap {
 }
 
 .about__description {

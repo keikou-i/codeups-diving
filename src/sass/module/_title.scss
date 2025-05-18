@@ -5,10 +5,8 @@
 }
 
 .title__en {
-    // display: inline-block;
     font-size: rem(32);
     line-height: calc(39 / 32);
-    // letter-spacing: 0;
     color: $font;
     font-weight: $normal;
     padding-inline-end: rem(2); // ピクパ用
@@ -23,10 +21,8 @@
 }
 
 .title__ja {
-    // display: inline-block;
     font-size: rem(12);
     line-height: calc(18 / 12);
-    // letter-spacing: 0;
     color: $accent;
     font-family: $second-font-family;
     margin-block-start: rem(4.5);
@@ -45,23 +41,11 @@
         color: $white;
     }
 }
-// .title__en--white,
-// .title__ja--white {
-//     color: $white;
-// }
-
-// .title__white .title__en::first-letter {
-//     color: $green2;
-// }
 .title__en--white::first-letter {
     @include mq(md) {
         color: $green2;
     }
 }
-
-// .title__shadow {
-//     text-shadow: 0 rem(2) rem(2) #808080
-// }
 
 .title__en.title__en--contact {
     font-size: rem(80);
@@ -77,7 +61,6 @@
     padding-inline-end: 0; // ピクパ用
 
     @include mq(md) {
-        // padding-inline-end: rem(0); // ピクパ用
     }
 }
 .title__ja.title__ja--voice {
@@ -145,13 +128,11 @@
     padding-inline-start: rem(2); // ピクパ用
 
     @include mq(md) {
-        // padding-inline-start: rem(2); // ピクパ用
     }
 }
 .title__ja.title__ja--campaign {
     padding-inline-end: 0; // ピクパ用
 
     @include mq(md) {
-        // padding-inline-start: rem(2); // ピクパ用
     }
 }

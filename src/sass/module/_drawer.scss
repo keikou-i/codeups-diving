@@ -31,7 +31,6 @@
 .drawer__icon.js-show {
     .drawer__icon--bar:nth-of-type(1) {
         rotate: 38deg;
-        // translate: 0 rem(12);
         translate: -3px rem(12); // 苦肉の策。
     }
 
@@ -41,7 +40,6 @@
 
     .drawer__icon--bar:nth-of-type(3) {
         rotate: -38deg;
-        // translate: 0 rem(-12);
         translate: -3px rem(-12); // 苦肉の策。
     }
 
@@ -56,27 +54,18 @@
     position: fixed;
     top: 0;
     right: 0;
-
-    // width: 278px;
     width: 100%;
-
     height: 100vh;
-    height: 100svh;
     background-color: $accent;
     overflow-y: scroll;
 
     z-index: 100;
-
-    // translate: 101%; // 右側に隠す
     opacity: 0;
     visibility: hidden;
-
-    // transition: translate 0.3s ease;
     transition: opacity 0.3s ease;
 }
 
 .drawer.js-show {
-    // translate: 0; // 左側に移動（表示する）
     opacity: 1;
     visibility: visible;
 }
@@ -89,7 +78,6 @@
 
 .drawer__inner {
     display: flex;
-    // justify-content: space-between;
     gap: rem(29);
 
     width: min(100%, rem(375));
@@ -97,17 +85,10 @@
     margin-inline: auto;
 }
 
-.drawer__left {
-}
-
-.drawer__right {
-}
-
 .drawer__list {
     display: flex;
     flex-direction: column;
-    row-gap: rem(18); // TODO ？　なぜカンプの値より大きく離れる？
-    // margin-bottom: 40px;
+    row-gap: rem(18);
 
     position: relative;
 }
@@ -119,7 +100,6 @@
 .drawer__list a {
     color: #fff;
     font-size: rem(16);
-    // font-size: 16px;
     font-weight: $normal;
     line-height: calc(18 / 16);
     letter-spacing: 0;
@@ -146,13 +126,3 @@
     content: "";
     margin-top: rem(-6);
 }
-
-// .drawer__btn {
-//     display: inline-block;
-//     padding: 6px 30px;
-//     background-color: #fff;
-//     border-radius: 100vmax;
-//     font-size: 20px;
-//     font-weight: 400;
-//     line-height: normal;
-// }

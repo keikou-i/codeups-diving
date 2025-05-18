@@ -6,42 +6,20 @@
     z-index: 1;
 }
 
-.hero__inner {
-}
-
 .hero__loading {
-    // position: fixed;
     position: absolute;
-
     z-index: 999;
     width: 100%;
-    // height: 100vh;
-    // height: 100%;
-    // max-height: rem(667);
     aspect-ratio: 375 / 667;
-
     top: 0;
     left: 0;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-
     display: grid;
     place-content: center;
     place-items: center;
-
     background-color: $white;
-    // background-color: red;
-
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    // transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 
     @include mq(md) {
-        // max-height: rem(768);
         aspect-ratio: 1440 / 768;
     }
 }
@@ -65,7 +43,6 @@
     font-size: rem(40);
     font-family: $third-font-family;
     line-height: calc(48 / 40);
-    // letter-spacing: rem(21.6);
     letter-spacing: rem(21);
     font-weight: $normal;
     color: $accent;
@@ -74,14 +51,12 @@
     @include mq(md) {
         font-size: rem(80);
         line-height: calc(100 / 80);
-        // letter-spacing: rem(43.2);
         letter-spacing: rem(42);
         padding-inline-start: rem(37); // ピクパ用
     }
 }
 
 .hero__sub-title {
-    // margin-top: prem(20);
     font-size: rem(20);
     font-family: $base-font-family;
     line-height: calc(33 / 20);
@@ -99,20 +74,6 @@
     color: $white;
 }
 
-.hero__swiper-container {
-}
-
-.hero__swiper {
-}
-
-.hero__swiper-wrapper {
-}
-
-.hero__swiper-slide {
-}
-
-.hero__image {
-}
 .hero__image img {
     aspect-ratio: 375 / 667;
     width: 100%;

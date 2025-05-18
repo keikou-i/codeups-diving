@@ -40,32 +40,3 @@
         right: rem(180);
     }
 }
-
-/* =============================
-ページネーション (bullets)
-============================= */
-/* 位置の設定 (枠組み) */
-// .swiper-pagination-bullets.swiper-pagination-horizontal {
-//     top: calc(100% + 30px);
-//     left: 0;
-//     text-align: left;
-// }
-
-// /* それぞれのページネーション */
-// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
-//     opacity: 1;
-//     width: 40px;
-//     height: 5px;
-//     // aspect-ratio: 1;
-//     border-radius: 0;
-//     background: #d9d9d9;
-//     margin-inline: calc(11px / 2);
-// }
-// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet:first-of-type {
-//     margin-left: 0;
-// }
-
-// /* activeな部分 */
-// .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
-//     background: #000;
-// }

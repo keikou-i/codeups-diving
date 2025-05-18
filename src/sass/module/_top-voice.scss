@@ -24,7 +24,6 @@
     @include mq(md) {
         position: absolute;
         width: min(100%, rem(71));
-        // top: rem(535); // 469+66
         bottom: rem(-70);
         right: calc(50% - min(39vw, rem(540))); //-180
     }
@@ -43,9 +42,6 @@
         padding-inline: 0; // リセット
         max-width: rem(1080); // (520*2)+40
     }
-}
-
-.top-voice__title {
 }
 
 .top-voice__voices {

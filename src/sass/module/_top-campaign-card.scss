@@ -2,64 +2,31 @@
 
 .top-campaign-card {
     color: $font;
-    // box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-    // padding: rem(16) rem(17) rem(24);
     background-color: $white;
-    // transition: background-color 0.3s;
-
-    // padding-block-end: rem(100);
     height: 100%; // 各々カードの高さを揃えるため
-    // height: auto; // 各々カードの高さを揃えるため
 
     @include mq(md) {
-        // padding-inline: rem(16);
     }
 }
 
 .top-campaign-card__link {
-    // display: grid;
-    // grid-template-rows: subgrid;
-    // grid-row: span 4; // 孫要素の数
-    // gap: 0; // 孫要素の間隔
-    // background-color: $white;
-    // transition: background-color 0.3s;
-
     height: 100%; // 各々カードの高さを揃えるため
-    // height: auto; // 各々カードの高さを揃えるため
     display: flex;
     flex-direction: column;
 }
 
-.top-campaign-card__image {
-    // 苦肉の策　spの時、overflow: hidden;があると画像が消えてしまうため...
-    // subgridが関係していると思われる...
-    // @include mq(md) {
-    //     overflow: hidden;
-    // }
-}
 .top-campaign-card__image img {
     aspect-ratio: 280 / 188;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transition: transform 0.5s;
-    // transition: scale 0.5s ease;
 
     @include mq(md) {
         aspect-ratio: 333 / 223;
     }
 }
 
-// .top-campaign-card__container {
-//     padding: rem(16) rem(16) rem(24);
-
-//     @include mq(md) {
-//         padding: rem(24) rem(16) rem(40);
-//     }
-// }
-
 .top-campaign-card__category {
-    // margin-block-start: rem(16);
     width: fit-content; // ※
     padding: rem(3) rem(11);
     border: 1px solid $accent;
@@ -78,7 +45,6 @@
 
 .top-campaign-card__title {
     margin-block-start: rem(4);
-    // align-self: center; //
     font-size: rem(16);
     font-weight: 500;
     line-height: calc(24 / 16);
@@ -89,7 +55,6 @@
     flex-grow: 1; // 文字数が増えたとき用
 
     @include mq(md) {
-        // align-self: auto; //
     }
 }
 
@@ -116,7 +81,6 @@
     display: flex;
     column-gap: rem(16);
     align-items: end;
-    // justify-content: center;
 
     @include mq(md) {
         margin-block-end: rem(40);
@@ -132,25 +96,11 @@
 }
 
 .top-campaign-card__price1 {
-    // text-decoration-line: line-through;
-
-    // text-decoration: underline;
-    // text-underline-offset: -5px;
-
-    // text-decoration-thickness: rem(3); /* 線の太さ */
-    // text-decoration-color: $red;
-
     // https://seory.co.jp/del-css/
     background-image: linear-gradient(
-        // transparent 0.5em,
         transparent rem(8),
         $red 0,
-        //  #fe3464 calc(0.5em + 1px),
         $red calc(rem(8) + rem(3)),
-        // transparent 0,
-        // transparent calc(0.5em + 3px),
-        //   #fe3464 0,
-        //   #fe3464 calc(0.5em + 4px),
         transparent 0
     );
     text-decoration: none;

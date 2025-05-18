@@ -1,7 +1,5 @@
 @use "global" as *;
 
-/* トップへ戻るボタン
-***************************************************************/
 .pagetop {
     position: fixed; // 位置固定
     right: rem(15);
@@ -24,12 +22,4 @@
 .pagetop.is-show {
     opacity: 1;
     visibility: visible;
-}
-
-.pagetop img {
-    // width: rem(48);
-
-    // @include mq(md) {
-    //     width: rem(80);
-    // }
 }

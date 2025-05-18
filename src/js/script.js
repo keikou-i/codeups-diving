@@ -14,20 +14,8 @@ jQuery(function ($) {
     // });
 
     // ハンバーガーメニュー
-    // document.addEventListener("DOMContentLoaded", () => {
-    //定義
-    // const drawerIcon    = document.querySelector(".drawer__icon");
-    // const drawer        = document.querySelector(".drawer");
     const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
     const headerHeight = document.querySelector("header").offsetHeight;
-
-    // jQueryに書き換える
-    // const drawerIcon    = $(".drawer__icon");
-    // const drawer        = $(".drawer");
-    // const drawerNavItem = $('.drawer__body a[href^="#"]');
-
-    // const headerHeight  = $("header")[0].offsetHeight;
-    // const headerHeight = $("header").outerHeight(); // jQueryらしい書き方
 
     const breakpoint = 768;
 
@@ -35,14 +23,6 @@ jQuery(function ($) {
     let isMenuOpenAtBreakpoint = false;
 
     //メニューを開くアニメーション
-    // const openMenu = () => {
-    //     if (!drawer.classList.contains("js-show"))
-    //     {
-    //         drawer.classList.add("js-show");
-    //         drawerIcon.classList.add("js-show");
-    //     }
-    // };
-    // jQueryに書き換える
     const openMenu = () => {
         if (!$(".drawer").hasClass("js-show")) {
             $(".drawer").addClass("js-show");
@@ -52,16 +32,6 @@ jQuery(function ($) {
     };
 
     //メニューを閉じるアニメーション
-    // const closeMenu = () => {
-    //     if (drawer.classList.contains("js-show"))
-    //     {
-    //         drawer.classList.remove("js-show");
-    //         drawerIcon.classList.remove("js-show");
-
-    //         isMenuOpen = false;
-    //     }
-    // };
-    // jQueryに書き換える
     const closeMenu = () => {
         if ($(".drawer").hasClass("js-show")) {
             $(".drawer").removeClass("js-show");
@@ -73,17 +43,6 @@ jQuery(function ($) {
     };
 
     //メニューの開閉動作
-    // const toggleMenu = () => {
-    //     if (!drawer.classList.contains("js-show"))
-    //     {
-    //         openMenu();
-    //     }
-    //     else
-    //     {
-    //         closeMenu();
-    //     }
-    // };
-    // jQueryに書き換える
     const toggleMenu = () => {
         if (!$(".drawer").hasClass("js-show")) {
             openMenu();
@@ -93,20 +52,6 @@ jQuery(function ($) {
     };
 
     //リサイズ処理
-    // const handleResize = () => {
-    //     const bp = breakpoint;
-    //     const windowWidth = window.innerWidth;
-
-    //     if (windowWidth > bp && isMenuOpenAtBreakpoint)
-    //     {
-    //         closeMenu();
-    //     }
-    //     else if (windowWidth <= bp && drawer.classList.contains("js-show"))
-    //     {
-    //         isMenuOpenAtBreakpoint = true;
-    //     }
-    // };
-    // jQueryに書き換える
     const handleResize = () => {
         const bp = breakpoint;
         const windowWidth = $(window).width();
@@ -117,18 +62,6 @@ jQuery(function ($) {
             isMenuOpenAtBreakpoint = true;
         }
     };
-
-    //メニュー外クリック処理
-    // const clickOuter = (event) => {
-    //     if (drawer.classList.contains("js-show") && !drawer.contains(event.target) && isMenuOpen)
-    //     {
-    //         closeMenu();
-    //     }
-    //     else if (drawer.classList.contains("js-show") && !drawer.contains(event.target))
-    //     {
-    //         isMenuOpen = true;
-    //     }
-    // };
 
     //該当箇所までスクロール
     const linkScroll = (target) => {
@@ -142,29 +75,12 @@ jQuery(function ($) {
             });
         }
     };
-    // jQueryに書き換える
-    // const linkScroll = (target) => {
-    //     if (target.length) { // jQueryのセレクタが空でないことを確認
-    //         const targetPosition = target.offset().top;
-    //         const offsetPosition = targetPosition - headerHeight;
-
-    //         $("html, body").animate(
-    //             { scrollTop: offsetPosition },
-    //             500 // スクロールの速度（ミリ秒）
-    //         );
-    //     }
-    // };
 
     //ヘッダーアイコン クリック時
-    // drawerIcon.addEventListener("click", toggleMenu);
     $(".drawer__icon").on("click", toggleMenu);
 
     //画面幅リサイズ時
-    // window.addEventListener("resize", handleResize);
     $(window).on("resize", handleResize);
-
-    //メニュー外クリック時
-    // document.addEventListener("click", clickOuter);
 
     //ページ内リンクナビメニュー クリック時
     drawerNavItem.forEach((item) => {
@@ -176,28 +92,6 @@ jQuery(function ($) {
             linkScroll(targetItem);
         });
     });
-    // jQueryに書き換える
-    // $(".drawer__body a[href^='#']").on("click", function (event) {
-    //     event.preventDefault();
-
-    //     const targetItem = $($(this).attr("href")); // jQueryでターゲット要素を取得
-    //     linkScroll(targetItem);
-    // });
-
-    // });
-
-    // // ハンバーガーボタンの開閉処理
-    // const hamburgerButton = document.getElementById("js-hamburger");
-
-    // hamburgerButton.addEventListener("click", () => {
-    //     const currentAriaExpanded = hamburgerButton.getAttribute("aria-expanded");
-
-    //     if (currentAriaExpanded === "false") {
-    //         hamburgerButton.setAttribute("aria-expanded", "true");
-    //     } else {
-    //         hamburgerButton.setAttribute("aria-expanded", "false");
-    //     }
-    // });
 
     // ボイスセクション
     //要素の取得とスピードの設定
@@ -231,7 +125,6 @@ jQuery(function ($) {
     });
 
     // プライス　セクション
-    // var box3 = $(".price__image"),
     var box3 = $(".price__image-wrap"),
         speed = 700;
 
