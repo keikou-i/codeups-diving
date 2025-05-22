@@ -7,7 +7,7 @@
 
     @include mq(md) {
         padding-block-start: rem(109); // 26+80
-        margin-inline-start: rem(170);
+        margin-inline-start: 0;
     }
 }
 

@@ -2,6 +2,7 @@
 
 @if $startFrom == sp {
   .inner {
+    max-width: rem(600); // テキストフィードバックによる追加
     width: 100%;
     padding-right: $padding-sp;
     padding-left: $padding-sp;

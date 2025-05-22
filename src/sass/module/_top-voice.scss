@@ -37,6 +37,7 @@
 .top-voice__inner {
     margin-inline: auto;
     padding-inline: rem(15);
+    max-width: rem(600); // テキストフィードバックによる追加
 
     @include mq(md) {
         padding-inline: 0; // リセット

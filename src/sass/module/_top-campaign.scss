@@ -2,10 +2,19 @@
 
 .top-campaign {
     margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
+
+    @include mq(md) {
+        margin-inline: 0; // リセット
+    }
 }
 
 .top-campaign__inner {
     position: relative;
+
+    @include mq(md) {  // テキストフィードバックによる追加
+        max-width: $inner;
+        width: 100%;
+    }
 }
 
 .top-campaign__title {
@@ -20,6 +29,7 @@
 
     @include mq(md) {
         margin-block-start: 0; // リセット
+        margin-inline-end: calc(50% - 50cqi); // cqi:水平スクロールバー対策
     }
 }
 

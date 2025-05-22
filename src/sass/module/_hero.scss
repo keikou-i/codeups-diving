@@ -4,12 +4,18 @@
     margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
     position: relative;
     z-index: 1;
+    height: 100vh; // テキストフィードバックによる追加
+}
+
+.hero__inner {
+    height: 100%; // テキストフィードバックによる追加
 }
 
 .hero__loading {
     position: absolute;
     z-index: 999;
     width: 100%;
+    height: 100%; // テキストフィードバックによる追加
     aspect-ratio: 375 / 667;
     top: 0;
     left: 0;
@@ -72,6 +78,14 @@
 .hero__main-title.hero__title--white,
 .hero__sub-title.hero__title--white {
     color: $white;
+}
+
+.hero__swiper-container {
+    height: inherit; // テキストフィードバックによる追加
+}
+
+.hero__swiper {
+    height: inherit; // テキストフィードバックによる追加
 }
 
 .hero__image img {

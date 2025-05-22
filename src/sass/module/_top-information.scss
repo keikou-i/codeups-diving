@@ -12,9 +12,13 @@
 
 .top-information__inner {
     padding-inline: rem(15);
+    max-width: rem(600); // テキストフィードバックによる追加
+    margin-inline: auto; // テキストフィードバックによる追加
 
     @include mq(md) {
         padding-inline: rem(30); // 適当値
+        max-width: none; // リセット
+        margin-inline: 0; // リセット
     }
 }
 
