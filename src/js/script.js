@@ -338,7 +338,41 @@ jQuery(function ($) {
     jQuery(window).on("scroll", function () {
         if (500 < jQuery(window).scrollTop()) {
             jQuery("#js-pagetop").addClass("is-show");
-        } else {
+
+            // フッター手前で止まる用
+            const scrollHeight = $(document).height();
+            const scrollPosition = $(window).height() + $(window).scrollTop();
+            const footHeight = $("footer").innerHeight();
+
+            // 画面幅によって bottom の値を変更
+            let footValue = 0;
+            let bottomValue;
+            if ($(window).width() < 768) {
+                footValue = 16;
+                bottomValue = "16px";
+            } else {
+                footValue = 20;
+                bottomValue = "20px";
+            }
+
+            if (scrollHeight - scrollPosition <= footHeight) {
+                $("#js-pagetop").css(
+                    {
+                        position: "absolute",
+                        bottom: footHeight + footValue,
+                    }
+                );
+            }
+            else {
+                $("#js-pagetop").css(
+                    {
+                        position: "fixed",
+                        bottom: bottomValue,
+                    }
+                );
+            }
+        }
+        else {
             jQuery("#js-pagetop").removeClass("is-show");
         }
     });
