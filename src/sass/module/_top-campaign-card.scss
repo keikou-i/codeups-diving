@@ -4,9 +4,9 @@
     color: $font;
     background-color: $white;
     height: 100%; // 各々カードの高さを揃えるため
-
-    @include mq(md) {
-    }
+}
+.top-campaign-card.--under {
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 }
 
 .top-campaign-card__link {
@@ -18,7 +18,7 @@
 .top-campaign-card__image img {
     aspect-ratio: 280 / 188;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 
     @include mq(md) {
@@ -42,6 +42,11 @@
         margin-block-start: rem(25);
     }
 }
+.top-campaign-card__category.--under {
+    @include mq(md) {
+        margin-inline: rem(24);
+    }
+}
 
 .top-campaign-card__title {
     margin-block-start: rem(4);
@@ -53,8 +58,11 @@
     padding-block-end: rem(8);
     margin-inline: rem(16);
     flex-grow: 1; // 文字数が増えたとき用
-
+}
+.top-campaign-card__title.--under {
     @include mq(md) {
+        font-size: rem(24);
+        margin-inline: rem(24);
     }
 }
 
@@ -74,6 +82,12 @@
         padding-inline-start: rem(73);
     }
 }
+.top-campaign-card__person.--under {
+    @include mq(md) {
+        text-align: center;
+        padding-inline: 0;
+    }
+}
 
 .top-campaign-card__price-wrap {
     margin-block: rem(8) rem(24);
@@ -87,6 +101,14 @@
         column-gap: rem(25);
     }
 }
+.top-campaign-card__price-wrap.--under {
+    margin-inline: 0;
+    justify-content: center;
+
+    @include mq(md) {
+        column-gap: rem(41);
+    }
+}
 
 .top-campaign-card__price1,
 .top-campaign-card__price2 {
@@ -97,12 +119,7 @@
 
 .top-campaign-card__price1 {
     // https://seory.co.jp/del-css/
-    background-image: linear-gradient(
-        transparent rem(8),
-        $red 0,
-        $red calc(rem(8) + rem(3)),
-        transparent 0
-    );
+    background-image: linear-gradient(transparent rem(8), $red 0, $red calc(rem(8) + rem(3)), transparent 0);
     text-decoration: none;
 
     font-size: rem(20);
@@ -112,12 +129,7 @@
         font-size: rem(24);
         padding-block-end: rem(2); // ピクパ用
 
-        background-image: linear-gradient(
-            transparent rem(10.5),
-            $red 0,
-            $red calc(rem(10.5) + rem(3)),
-            transparent 0
-        );
+        background-image: linear-gradient(transparent rem(10.5), $red 0, $red calc(rem(10.5) + rem(3)), transparent 0);
     }
 }
 
@@ -129,5 +141,56 @@
     @include mq(md) {
         font-size: rem(40);
         padding-inline-start: rem(1); // ピクパ用
+    }
+}
+
+.top-campaign-card__bottom-container {
+    @include mq(md) {
+        margin-block: rem(-16) rem(44);
+        padding-inline: rem(24);
+    }
+}
+
+.top-campaign-card__text {
+    @include mq(md) {
+        color: $font;
+        font-family: $second-font-family;
+        font-size: rem(16);
+        font-weight: $normal;
+        line-height: calc(24 / 16);
+    }
+}
+
+.top-campaign-card__bottom-wrap {
+    @include mq(md) {
+        margin-block-start: rem(32);
+        text-align: center;
+    }
+}
+
+.top-campaign-card__date {
+    @include mq(md) {
+        color: $accent;
+        font-family: $third-font-family;
+        font-size: rem(16);
+        font-weight: $bold;
+        line-height: calc(18 / 16);
+    }
+}
+
+.top-campaign-card__reserve {
+    @include mq(md) {
+        margin-block-start: rem(7);
+        color: $accent;
+        font-family: $second-font-family;
+        font-size: rem(14);
+        font-weight: $normal;
+        line-height: calc(18 / 14);
+    }
+}
+
+.top-campaign-card__btn-wrap {
+    @include mq(md) {
+        margin-block-start: rem(16);
     }
 }

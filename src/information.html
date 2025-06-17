@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="robots" content="noindex" />
+
+        <!-- meta情報 -->
+        <title>Information</title>
+        <meta name="description" content="CodeUpsの課題です" />
+        <meta name="keywords" content="" />
+
+        <!-- ogp -->
+        <meta property="og:title" content="CodeUps 課題「Diving」" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:site_name" content="Diving" />
+        <meta property="og:description" content="CodeUpsの課題である「Diving」です。" />
+
+        <!-- ファビコン -->
+        <link rel="icon" href="./assets/images/common/favicon.ico" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <!-- パンくず -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+        <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="./assets/js/jquery.inview.min.js"></script>
+        <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+        <script defer src="./assets/js/script.js"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="header layout-header">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <a href="#">
+                        <img src="./assets/images/common/logo.svg" alt="CodeUpsのロゴ" decoding="async" width="141" height="58" />
+                    </a>
+                </h1>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#">Campaign<span>キャンペーン</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">About us<span>私たちについて</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Information<span>ダイビング情報</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Blog<span>ブログ</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Voice<span>お客様の声</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Price<span>料金一覧</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">FAQ<span>よくある質問</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#">Contact<span>お問合せ</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ハンバーガー -->
+        <button type="button" class="drawer__icon">
+            <span class="drawer__icon--bar"></span>
+            <span class="drawer__icon--bar"></span>
+            <span class="drawer__icon--bar"></span>
+        </button>
+
+        <!-- ドロワー -->
+        <div class="drawer">
+            <div class="drawer__body">
+                <div class="drawer__inner">
+                    <div class="drawer__left">
+                        <ul class="drawer__list">
+                            <li><a href="#top">キャンペーン</a></li>
+                            <li><a href="#about">ライセンス取得</a></li>
+                            <li><a href="#service">貸切体験ダイビング</a></li>
+                            <li><a href="#feature">ナイトダイビング</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">私たちについて</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">ダイビング情報</a></li>
+                            <li><a href="#">ライセンス講習</a></li>
+                            <li><a href="#">体験ダイビング</a></li>
+                            <li><a href="#">ファンダイビング</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">ブログ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="drawer__right">
+                        <ul class="drawer__list">
+                            <li><a href="#">お客様の声</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">料金一覧</a></li>
+                            <li><a href="#">ライセンス講習</a></li>
+                            <li><a href="#">体験ダイビング</a></li>
+                            <li><a href="#">ファンダイビング</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">よくある質問</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li>
+                                <a href="#">プライバシー<br />ポリシー</a>
+                            </li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">利用規約</a></li>
+                        </ul>
+                        <ul class="drawer__list">
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="inner">
+                <!-- メインビュー -->
+                <div class="hero --information">
+                    <div class="hero__inner --information">
+                        <div class="hero__title-wrap">
+                            <h2 class="hero__main-title hero__title--white --information">Information</h2>
+                        </div>
+
+                        <div class="hero__information">
+                            <picture class="hero__image --information">
+                                <source media="(min-width: 768px)" srcset="./assets/images/hero/hero-information-pc@2x.webp" type="image/webp" width="1440" height="548" />
+                                <source media="(min-width: 768px)" srcset="./assets/images/hero/hero-information-pc@2x.jpg" width="1440" height="548" />
+                                <source srcset="./assets/images/hero/hero-information-sp@2x.webp" type="image/webp" width="375" height="460" />
+                                <img src="./assets/images/hero/hero-information-sp@2x.jpg" alt="ダイバーと魚の写真" width="375" height="460" decoding="async" loading="lazy" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- パンくず -->
+                <div class="layout-breadcrumb breadcrumb">
+                    <div class="breadcrumb__inner">
+                        <span property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" href="/" class="home">
+                                <span property="name">TOP</span>
+                            </a>
+                            <meta property="position" content="1" />
+                        </span>
+
+                        <i class="fas fa-angle-right"></i>
+
+                        <span class="current-item">ダイビング情報</span>
+                    </div>
+                </div>
+
+                <!-- インフォメーション本体 -->
+                <div class="layout-information-under information-under">
+                    <!-- 魚の画像 -->
+                    <div class="information-under__fish">
+                        <img src="./assets/images/information/under-information_fish@2x.png" alt="魚の画像" decoding="async" loading="lazy" width="301" height="138" />
+                    </div>
+
+                    <div class="information-under__inner">
+                        <!-- タブ部 -->
+                        <div class="information-under__tablist" role="tablist">
+                            <!-- <button class="campaign-under__tab" role="tab" id="tab-all" aria-controls="panel-all" aria-selected="true" tabindex="0">ALL</button> -->
+                            <button class="information-under__tab" role="tab" id="tab1" aria-controls="panel1" aria-selected="true" tabindex="0">
+                                <span>ライセンス<br class="u-mobile" />講習</span>
+                            </button>
+                            <!-- <button class="information-under__tab" role="tab" id="tab1" aria-controls="panel1" aria-selected="true" tabindex="0"><i></i>ライセンス<br class="u-mobile" />講習</button> -->
+                            <button class="information-under__tab" role="tab" id="tab2" aria-controls="panel2" aria-selected="false" tabindex="-1">
+                                <span>ファン<br class="u-mobile" />ダイビング</span>
+                            </button>
+                            <button class="information-under__tab" role="tab" id="tab3" aria-controls="panel3" aria-selected="false" tabindex="-1">
+                                <span>体験<br class="u-mobile" />ダイビング</span>
+                            </button>
+                        </div>
+
+                        <!-- タブパネル（カード） -->
+                        <div class="information-under__contents">
+                            <!-- １タブ目（ライセンス講習） -->
+                            <div class="information-under__content-wrap js-show" role="tabpanel" id="panel1" aria-labelledby="tab1" tabindex="0">
+                                <div class="information-under__content">
+                                    <div class="information-under-content__inner">
+                                        <div class="information-under__container information --under">
+                                            <div class="information__info">
+                                                <div class="information__container">
+                                                    <h3 class="information__title --under">ライセンス講習</h3>
+                                                    <p class="information__description --under">
+                                                        泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="information__image-wrap">
+                                                <picture class="information__image --under">
+                                                    <source srcset="./assets/images/information/under-information_license@2x.webp" type="image/webp" width="297" height="189" />
+                                                    <img src="./assets/images/information/under-information_license@2x.jpg" alt="ライセンス講習" width="297" height="189" decoding="async" loading="lazy" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  information-under__content-wrap -->
+
+                            <!-- ２タブ目（ファンダイビング） -->
+                            <div class="information-under__content-wrap" role="tabpanel" id="panel2" aria-labelledby="tab2" tabindex="0">
+                                <div class="information-under__content">
+                                    <div class="information-under-content__inner">
+                                        <div class="information-under__container information --under">
+                                            <div class="information__info">
+                                                <div class="information__container">
+                                                    <h3 class="information__title --under">ファンダイビング</h3>
+                                                    <p class="information__description --under">
+                                                        ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="information__image-wrap">
+                                                <picture class="information__image --under">
+                                                    <source srcset="./assets/images/information/under-information_fundiving@2x.webp" type="image/webp" width="297" height="189" />
+                                                    <img src="./assets/images/information/under-information_fundiving@2x.jpg" alt="ファンダイビング" width="297" height="189" decoding="async" loading="lazy" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  information-under__content-wrap -->
+
+                            <!-- ３タブ目（体験ダイビング） -->
+                            <div class="information-under__content-wrap" role="tabpanel" id="panel3" aria-labelledby="tab3" tabindex="0">
+                                <div class="information-under__content">
+                                    <div class="information-under-content__inner">
+                                        <div class="information-under__container information --under">
+                                            <div class="information__info">
+                                                <div class="information__container">
+                                                    <h3 class="information__title --under">体験ダイビング</h3>
+                                                    <p class="information__description --under">
+                                                        ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="information__image-wrap">
+                                                <picture class="information__image --under">
+                                                    <source srcset="./assets/images/information/under-information_diving@2x.webp" type="image/webp" width="297" height="189" />
+                                                    <img src="./assets/images/information/under-information_diving@2x.jpg" alt="体験ダイビング" width="297" height="189" decoding="async" loading="lazy" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  information-under__content-wrap -->
+                        </div>
+                        <!--  information-under__contents -->
+                    </div>
+                    <!-- campaign-under__inner -->
+                </div>
+                <!-- campaign-under -->
+
+                <!-- コンタクト -->
+                <section class="contact layout-contact">
+                    <!-- 魚の画像 -->
+                    <div class="contact__fish">
+                        <img src="./assets/images/common/contact_fish@2x.png" alt="魚の画像" width="309" height="146" decoding="async" loading="lazy" />
+                    </div>
+
+                    <div class="contact__inner">
+                        <ul class="contact__list">
+                            <!-- 上段（左側） -->
+                            <li class="contact__item">
+                                <div class="contact__item-content">
+                                    <div class="contact__item-logo">
+                                        <img src="./assets/images/common/contact_logo.svg" alt="logo" />
+                                    </div>
+
+                                    <div class="contact__item-info">
+                                        <address class="contact__item-address">
+                                            <p>沖縄県那覇市1-1</p>
+                                            <p>TEL:0120-000-0000</p>
+                                            <p>営業時間:8:30-19:00</p>
+                                            <p>定休日:毎週火曜日</p>
+                                        </address>
+
+                                        <div class="contact__item-map-wrap">
+                                            <div class="contact__item-map">
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.47532393975!2d127.6803058491812!3d26.2137408314256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5699dc05bf813%3A0x3501764c0a57176d!2z44CSOTAwLTAwMTUg5rKW57iE55yM6YKj6KaH5biC5LmF6IyC5Zyw77yR5LiB55uu77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1739062208338!5m2!1sja!2sjp"
+                                                    style="border: 0"
+                                                    allowfullscreen=""
+                                                    loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 下段（右側） -->
+                            <li class="contact__item">
+                                <div class="contact__item-content">
+                                    <hgroup class="contact__title title">
+                                        <h2 class="title__en title__en--contact">Contact</h2>
+                                        <p class="title__ja u-mobile title__ja--contact">お問合せ</p>
+                                        <p class="title__ja u-desktop title__ja--contact">お問い合わせ</p>
+                                    </hgroup>
+
+                                    <p class="contact__item-text">ご予約・お問い合わせはコチラ</p>
+
+                                    <div class="contact__btn-wrap">
+                                        <a href="#" class="contact__btn button">
+                                            <span>Contact us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- contact__inner -->
+                </section>
+            </div>
+            <!-- inner -->
+        </main>
+
+        <!-- トップへ戻るボタン -->
+        <a href="#" class="pagetop" id="js-pagetop">
+            <img src="./assets//images/common/pagetop.png" alt="トップへ戻るボタン" />
+        </a>
+
+        <!-- フッター -->
+        <footer class="footer layout-footer">
+            <div class="footer__inner">
+                <div class="footer__head">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <img src="./assets/images/common/footer_logo.svg" alt="logo" />
+                        </a>
+                    </div>
+
+                    <div class="footer__sns">
+                        <a class="footer__sns-icon" href="#" target="_blank" rel="noopener">
+                            <img src="./assets/images/common/facebook.svg" alt="facebook" />
+                        </a>
+                        <a class="footer__sns-icon" href="#" target="_blank" rel="noopener">
+                            <img src="./assets/images/common/instagram.svg" alt="instagram" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__wrap">
+                    <div class="footer__body">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-items1">
+                                <li class="footer__nav-item">
+                                    <a href="#">キャンペーン</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ライセンス取得</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">貸切体験ダイビング</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ナイトダイビング</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">私たちについて</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav-items2">
+                                <li class="footer__nav-item">
+                                    <a href="#">ダイビング情報</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ライセンス講習</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">体験ダイビング</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ファンダイビング</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ブログ</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav-items3">
+                                <li class="footer__nav-item">
+                                    <a href="#">お客様の声</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">料金一覧</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ライセンス講習</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">体験ダイビング</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">ファンダイビング</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav-items4">
+                                <li class="footer__nav-item">
+                                    <a href="#">よくある質問</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">利用規約</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="#">お問い合わせ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- footer__body -->
+                </div>
+                <!-- footer__wrap -->
+
+                <small class="footer__copyright"> Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved. </small>
+            </div>
+            <!-- footer__inner -->
+        </footer>
+    </body>
+</html>

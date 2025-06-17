@@ -10,17 +10,6 @@
     }
 }
 
-.footer__inner {
-    margin-inline: auto;
-    padding-inline: rem(13);
-    width: min(100%, rem(375));
-
-    @include mq(md) {
-        padding-inline: rem(30); // 苦肉の策
-        width: min(100%, rem(1140)); // 苦肉の策
-    }
-}
-
 .footer__head {
     display: flex;
     flex-direction: column;
@@ -42,9 +31,6 @@
 
 .footer__logo a {
     display: block;
-
-    @include mq(md) {
-    }
 }
 
 .footer__logo img {
@@ -83,9 +69,6 @@
 
 .footer__wrap {
     padding-inline-start: rem(37 - 14);
-
-    @include mq(md) {
-    }
 }
 
 .footer__body {

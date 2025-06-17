@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.campaign-under {
+    margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
+    position: relative; // 画像の基点
+}
+
+.campaign-under__fish {
+    position: absolute;
+    width: min(100%, rem(120));
+    top: rem(-25);
+    left: calc(50% - min(45vw, rem(370)));
+    z-index: -1;
+
+    @include mq(md) {
+        width: min(100%, rem(301));
+        top: rem(-70);
+        left: calc(50% - min(44vw, rem(620)));
+    }
+}
+.campaign-under__fish img {
+    width: 100%;
+    height: 100%;
+}
+
+.campaign-under__inner {
+    padding-inline: rem(15);
+    margin-inline: auto;
+    max-width: rem(600);
+
+    @include mq(md) {
+        padding-inline: rem(30);
+        max-width: none;
+        width: min(100%, rem(1080 + 30*2));
+    }
+}
+
+.campaign-under__tablist {
+    display: flex;
+    gap: rem(16) rem(21);
+    flex-wrap: wrap;
+
+    @include mq(md) {
+        gap: rem(16) rem(32);
+    }
+}
+
+.campaign-under__tab {
+    color: $accent;
+    background-color: $white;
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: calc(22 / 14);
+    border: rem(1) solid $accent;
+    padding-inline: 0; // リセット
+    padding-block: rem(6);
+    width: rem(162);
+    font-family: $second-font-family;
+
+    @include mq(md) {
+        width: min(14vw, rem(162));
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+}
+.campaign-under__tab[aria-selected="true"] {
+    color: $white;
+    background-color: $accent;
+    position: relative;
+    pointer-events: none;
+}
+
+.campaign-under__contents {
+    padding-inline-start: rem(33); // 48-15
+    padding-inline-end: rem(32); // 47-15
+    margin-block-start: rem(40);
+
+    @include mq(md) {
+        padding-inline: 0; // リセット
+    }
+}
+
+.campaign-under__content-wrap {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    translate: 0 20px;
+    transition: opacity 1s ease, translate 0.5s ease;
+}
+.campaign-under__content-wrap.js-show {
+    opacity: 1;
+    visibility: visible;
+    height: fit-content;
+    translate: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: rem(40);
+
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(40);
+        row-gap: rem(80);
+    }
+}
+
+.campaign-under__pagination {
+    margin-block-start: rem(80);
+}

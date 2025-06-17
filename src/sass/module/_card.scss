@@ -63,7 +63,4 @@
     font-size: rem(16);
     line-height: calc(24 / 16);
     font-family: $second-font-family;
-
-    @include mq(md) {
-    }
 }

@@ -114,7 +114,4 @@
     justify-content: space-between;
     margin-block-start: rem(8);
     column-gap: rem(20); // テキストフィードバックによる追加
-
-    @include mq(md) {
-    }
 }

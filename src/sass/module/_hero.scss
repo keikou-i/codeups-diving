@@ -6,9 +6,18 @@
     z-index: 1;
     height: 100vh; // テキストフィードバックによる追加
 }
+.hero.--campaign,
+.hero.--information {
+    height: auto; // リセット
+}
 
 .hero__inner {
     height: 100%; // テキストフィードバックによる追加
+}
+.hero__inner.--campaign,
+.hero__inner.--information {
+    height: auto; // リセット
+    position: relative; // 下層キャンペーンページ用に起点を再設定
 }
 
 .hero__loading {
@@ -96,5 +105,30 @@
 
     @include mq(md) {
         aspect-ratio: 1440 / 768;
+    }
+}
+
+.hero__main-title.--campaign,
+.hero__main-title.--information {
+    font-size: rem(40);
+    line-height: calc(48 / 40);
+    letter-spacing: rem(0); // TODO
+    padding: 0; // リセット
+
+    @include mq(md) {
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+    }
+}
+
+.hero__campaign img,
+.hero__information img {
+    width: 100%;
+    max-height: rem(460);
+    height: 100%;
+    object-fit: cover;
+
+    @include mq(md) {
+        max-height: rem(548);
     }
 }

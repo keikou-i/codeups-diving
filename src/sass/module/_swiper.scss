@@ -24,7 +24,10 @@
 /* 各ボタンのカスタマイズ */
 .swiper-button-prev,
 .swiper-button-next {
+    display: none;
+
     @include mq(md) {
+        display: block;
         bottom: calc(100% + rem(25));
         width: rem(80);
         height: rem(80);
@@ -32,11 +35,11 @@
 }
 .swiper-button-prev {
     @include mq(md) {
-        right: rem(340);
+        right: calc(rem(340) / rem(1440) * 100vw );
     }
 }
 .swiper-button-next {
     @include mq(md) {
-        right: rem(180);
+        right: calc(rem(180) / rem(1440) * 100vw );
     }
 }

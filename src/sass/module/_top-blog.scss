@@ -2,7 +2,25 @@
 
 .top-blog {
     @include mq(md) {
-        position: relative; // 魚画像の基点
+        position: relative; // 魚画像と背景画像の基点
+
+        margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
+        padding-block-start: rem(96);
+    }
+}
+.top-blog::before {
+    @include mq(md) {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        background-image: image-set(url("../images/blog/background@2x.webp") type("image/webp"), url("../images/blog/background@2x.jpg") type("image/jpeg"));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: rem(500);
+        z-index: -1;
     }
 }
 
@@ -19,33 +37,8 @@
     height: 100%;
 }
 
-.top-blog__inner {
-    margin-inline: auto;
-
-    @include mq(md) {
-        max-width: rem(1079); // 1079+(20*2)
-    }
-}
-
-.top-blog__title {
-    @include mq(md) {
-        padding-block-start: rem(96);
-        // このクラスに背景画像を付けることにした
-        height: rem(500);
-        background-image: image-set(url("../images/blog/background@2x.webp") type("image/webp"), url("../images/blog/background@2x.jpg") type("image/jpeg"));
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
-    }
-}
-
 .top-blog__cards {
     margin-block-start: rem(28);
-
-    @include mq(md) {
-        margin-block-start: rem(-254);
-    }
 }
 
 .top-blog__button {

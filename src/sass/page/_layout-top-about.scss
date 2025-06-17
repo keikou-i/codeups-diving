@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .layout-top-about {
-    margin-block: rem(82) rem(74);
+    margin-block-start: rem(82);
 
     @include mq(md) {
-        margin-block: rem(139) rem(164);
+        margin-block-start: rem(139);
     }
 }

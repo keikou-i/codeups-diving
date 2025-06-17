@@ -24,18 +24,6 @@
     height: 100%;
 }
 
-.top-price__inner {
-    padding-inline: rem(15);
-    max-width: rem(600); // テキストフィードバックによる追加
-    margin-inline: auto; // テキストフィードバックによる追加
-
-    @include mq(md) {
-        padding-inline: rem(25); // テキストフィードバックによる追加
-        max-width: none; // リセット
-        margin-inline: 0; // リセット
-    }
-}
-
 .top-price__container {
     margin-block-start: rem(28);
 

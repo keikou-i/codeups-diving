@@ -13,6 +13,9 @@
         padding-inline-end: rem(9); // ピクパ用
     }
 }
+.information.--under {
+    row-gap: rem(8);
+}
 
 .information__image-wrap {
     position: relative; // アニメーション用
@@ -31,13 +34,17 @@
 .information__image img {
     aspect-ratio: 345 / 227;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 
     @include mq(md) {
         aspect-ratio: 540 / 356;
-        max-width: rem(540);
     }
+}
+.information__image.--under img {
+    aspect-ratio: 297 / 189;
+    // width: 100%;
+    height: auto;
 }
 
 .information__info {
@@ -67,6 +74,11 @@
         padding-block-end: rem(6);
     }
 }
+.information__title.--under {
+    font-size: rem(24);
+    line-height: calc(24 / 24);
+    padding-block-end: rem(8);
+}
 
 .information__description {
     margin-block-start: rem(7);
@@ -75,15 +87,12 @@
     font-size: rem(16);
     font-weight: $normal;
     line-height: calc(24 / 16);
-
-    @include mq(md) {
-    }
+}
+.information__description.--under {
+    margin-block-start: rem(8);
 }
 
 .information__button {
     padding-inline-end: rem(4); // ピクパ用
     text-align: center;
-
-    @include mq(md) {
-    }
 }

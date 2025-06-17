@@ -1,13 +1,8 @@
 @use "global" as *;
 
 .top-about {
-    // spの左右インナーが20pxとなっているので、親要素をはみ出して対応。
-    width: 100vw;
-    margin-inline: calc(50% - 50vw);
-
     @include mq(md) {
         position: relative; // サンゴ画像の基点
-        width: auto; // リセット
         margin-inline: 0; // リセット
     }
 }
@@ -23,18 +18,6 @@
 .top-about__coral img {
     width: 100%;
     height: 100%;
-}
-
-.top-about__inner {
-    padding-inline: rem(14) rem(16);
-    max-width: rem(600); // テキストフィードバックによる追加
-    margin-inline: auto; // テキストフィードバックによる追加
-
-    @include mq(md) {
-        padding-inline: 0; // リセット
-        max-width: rem(1080); // 880+200
-        margin-inline: auto; // テキストフィードバックによる追加
-    }
 }
 
 .top-about__container {

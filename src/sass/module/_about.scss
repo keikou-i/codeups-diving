@@ -41,9 +41,6 @@
 }
 .about__image-fish img {
     height: 100%;
-
-    @include mq(md) {
-    }
 }
 
 .about__message {

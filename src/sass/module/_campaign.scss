@@ -1,14 +1,7 @@
 @use "global" as *;
 
 .campaign {
-    overflow: hidden; // 水平スクロールバーを消すために必要
-    padding-block-start: rem(90); // 24+66
-    margin-inline-start: rem(5);
-
-    @include mq(md) {
-        padding-block-start: rem(109); // 26+80
-        margin-inline-start: 0;
-    }
+    // overflow: hidden; // デフォルト（水平スクロールバーを消すため）
 }
 
 .campaign__inner {
@@ -24,7 +17,6 @@
     height: auto;
     box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
     margin-block-end: rem(10); // 底辺の影を見せるため
-    margin-inline-start: rem(10); // 左端の左辺の影を見せるため
 
     @include mq(md) {
         width: rem(333);
@@ -39,5 +31,5 @@
 }
 
 .campaign__swiper {
-    overflow: visible;
+    // overflow: visible; // デフォルト
 }

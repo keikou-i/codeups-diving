@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.pagination {
+    display: flex;
+    gap: 0; /* 隙間なし */
+    justify-content: center;
+}
+.pagination a {
+    transition: all 0.3s ease 0s;
+}
+.pagination a:hover {
+    opacity: 0.6;
+}
+.pagination a.next,
+.pagination a.prev {
+    font-size: rem(16);
+}
+.pagination a.next:hover,
+.pagination a.prev:hover {
+    opacity: 0.6;
+}
+
+.page-numbers {
+    background: #fff;
+    border: 1px solid $accent;
+    color: $accent;
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-size: rem(16);
+    height: rem(38);
+    line-height: 36px;
+    margin-right: 12px;
+    min-width: rem(38);
+    text-align: center;
+    text-decoration: none;
+}
+.page-numbers:last-child {
+    margin-right: 0;
+}
+.page-numbers.current {
+    background: $accent;
+    border: 1px solid $accent;
+    color: #fff;
+    font-weight: 700;
+}
+.page-numbers.dots,
+.page-numbers.next,
+.page-numbers.prev {
+    line-height: 36px;
+    min-width: rem(38);
+}
+.page-numbers.prev {
+    margin-right: 40px;
+}
+.page-numbers.next {
+    margin-left: 28px;
+}
+
+.fas {
+}
+
+.fa-angle-right {
+}

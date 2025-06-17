@@ -205,7 +205,7 @@ jQuery(function ($) {
         centeredSlides: false,
         slidesPerView: "auto",
         // slidesPerView: 4,
-        // spaceBetween: 40,
+        // spaceBetween: 40, // ↓下記で設定している
         // autoHeight: true, // 高さを自動調整
 
         // ページネーション
@@ -237,7 +237,7 @@ jQuery(function ($) {
             },
             768: {
                 // slidesPerView: 1.2,
-                spaceBetween: 30,
+                spaceBetween: 40,
             },
             // 1440: {
             //     // slidesPerView: 3,
@@ -356,24 +356,104 @@ jQuery(function ($) {
             }
 
             if (scrollHeight - scrollPosition <= footHeight) {
-                $("#js-pagetop").css(
-                    {
-                        position: "absolute",
-                        bottom: footHeight + footValue,
-                    }
-                );
+                $("#js-pagetop").css({
+                    position: "absolute",
+                    bottom: footHeight + footValue,
+                });
+            } else {
+                $("#js-pagetop").css({
+                    position: "fixed",
+                    bottom: bottomValue,
+                });
             }
-            else {
-                $("#js-pagetop").css(
-                    {
-                        position: "fixed",
-                        bottom: bottomValue,
-                    }
-                );
-            }
-        }
-        else {
+        } else {
             jQuery("#js-pagetop").removeClass("is-show");
+        }
+    });
+
+    // ***************************************************************/
+    //  タブ切り替え
+    // ***************************************************************/
+    // 練習1
+    jQuery(function ($) {
+        $(".service-tabs__item").on("click", function () {
+            // tabの切り替え
+            $(".service-tabs__item").attr("aria-selected", "false");
+            $(this).attr("aria-selected", "true");
+
+            // tab panelの切り替え
+            $(".service-tabs__content-wrap").removeClass("js-show");
+            $("#" + $(this).attr("aria-controls")).addClass("js-show");
+
+            return false;
+        });
+    });
+
+    // キャンペーンのタグ切り替え
+    jQuery(function ($) {
+        $(".campaign-under__tab").on("click", function () {
+            // tabの切り替え
+            $(".campaign-under__tab").attr("aria-selected", "false");
+            $(this).attr("aria-selected", "true");
+
+            // tab panelの切り替え
+            $(".campaign-under__content-wrap").removeClass("js-show");
+            $("#" + $(this).attr("aria-controls")).addClass("js-show");
+
+            return false;
+        });
+    });
+
+    // インフォメーションのタグ切り替え
+    jQuery(function ($) {
+        $(".information-under__tab").on("click", function () {
+            // tabの切り替え
+            $(".information-under__tab").attr("aria-selected", "false");
+            $(this).attr("aria-selected", "true");
+
+            // tab panelの切り替え
+            $(".information-under__content-wrap").removeClass("js-show");
+            $("#" + $(this).attr("aria-controls")).addClass("js-show");
+
+            return false;
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // console.log("test1");
+
+    // ***************************************************************/
+    //  ドロワーメニュー表示中、背景を縦スクロールさせない
+    // ***************************************************************/
+
+    // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+    document.querySelector(".drawer__icon").addEventListener("click", function () {
+        // body要素とhtml要素を取得
+        var body = document.body;
+        var html = document.documentElement;
+
+        // 現在のbodyとhtmlのスタイルを取得
+        var bodyStyle = window.getComputedStyle(body);
+        var htmlStyle = window.getComputedStyle(html);
+
+        // どちらかがoverflow: hidden かどうかを確認
+        if (bodyStyle.overflow === "hidden" || htmlStyle.overflow === "hidden") {
+            // スクロールを有効に戻す
+            body.style.height = "";
+            body.style.overflow = "";
+            html.style.height = "";
+            html.style.overflow = "";
+
+            // console.log("スクロールを有効に戻しました。");
+        } else {
+            // スクロールを無効にする
+            body.style.height = "100%";
+            body.style.overflow = "hidden";
+            html.style.height = "100%";
+            html.style.overflow = "hidden";
+
+            // console.log("スクロールを無効にしました！");
         }
     });
 });

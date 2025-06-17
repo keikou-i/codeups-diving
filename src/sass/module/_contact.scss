@@ -4,9 +4,7 @@
     position: relative;
 
     @include mq(md) {
-        margin-inline: rem(10);
-        padding: rem(80) rem(50);
-        box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
+        padding-inline: rem(30);
     }
 }
 
@@ -28,10 +26,10 @@
 }
 
 .contact__inner {
-    padding-inline: rem(10);
 
     @include mq(md) {
-        padding-inline: 0;
+        padding-block: rem(80);
+        box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -54,7 +52,6 @@
     }
 }
 .contact__item:nth-of-type(2) {
-
     @include mq(md) {
         border-left: 1px solid $accent;
         width: min(100%, rem(486));
@@ -73,7 +70,6 @@
     }
 }
 .contact__item:nth-of-type(2) .contact__item-content {
-
     @include mq(md) {
         padding-inline-start: rem(18); // ピクパ対応
     }
@@ -91,7 +87,7 @@
 .contact__item-logo img {
     display: inline-block;
     // •	img を inline-block にすると、親要素（.contact__item-logo）の中で テキストのベースラインに揃えようとする 挙動が発生します。
-	// •	その結果、img の下に ベースラインとの差分となる余白 ができ、親要素の高さが意図せず大きくなることがあります。
+    // •	その結果、img の下に ベースラインとの差分となる余白 ができ、親要素の高さが意図せず大きくなることがあります。
     vertical-align: bottom;
     // •	画像のベースラインをボトムに合わせることで、余白をなくします。
 
@@ -108,7 +104,7 @@
     flex-direction: column;
     gap: rem(16);
 
-    @include mq(md){
+    @include mq(md) {
         margin-block-start: rem(24);
         flex-direction: row;
         gap: rem(21);
@@ -127,7 +123,7 @@
     flex-direction: column;
     gap: rem(4);
 
-    @include mq(md){
+    @include mq(md) {
         text-align: left;
         min-width: rem(146);
     }
@@ -135,7 +131,7 @@
 .contact__item-address p:first-of-type {
     padding-inline-end: rem(10); // ピクパ対応
 
-    @include mq(md){
+    @include mq(md) {
         padding-inline-end: 0;
     }
 }
@@ -143,7 +139,7 @@
 .contact__item-map {
     box-shadow: rem(1) rem(1) rem(6) #808080;
 
-    @include mq(md){
+    @include mq(md) {
         box-shadow: none;
     }
 }
@@ -152,7 +148,7 @@
     width: 100%;
     height: auto;
 
-    @include mq(md){
+    @include mq(md) {
         aspect-ratio: 273 / 140;
     }
 }
@@ -172,15 +168,12 @@
     margin-top: rem(40);
     text-align: center;
     padding-inline-end: rem(5); // ピクパ対応
-
-    @include mq(md){
-    }
 }
 
 .contact__btn::before {
     box-shadow: rem(1) rem(1) rem(6) #808080;
 
-    @include mq(md){
+    @include mq(md) {
         box-shadow: none;
     }
 }
