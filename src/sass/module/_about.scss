@@ -12,7 +12,6 @@
 
     @include mq(md) {
         aspect-ratio: 1080 / 661; // 幅(880+200) 高さ(581+80)
-        padding-inline-start: rem(10); // ピクパ用
     }
 }
 
@@ -30,13 +29,12 @@
 .about__image-fish {
     position: absolute;
     top: 12.5%; // 26/212  (186+26)
-    left: 18.55%; // 64/345
     z-index: -1;
     width: 81.44%; // 281/345
+    right: 0;
 
     @include mq(md) {
         top: 12.1%; // 80/661
-        left: 19.5%; // ピクパ用に調整
     }
 }
 .about__image-fish img {

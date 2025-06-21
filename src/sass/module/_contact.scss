@@ -2,10 +2,6 @@
 
 .contact {
     position: relative;
-
-    @include mq(md) {
-        padding-inline: rem(30);
-    }
 }
 
 .contact__fish {
@@ -25,10 +21,10 @@
     height: 100%;
 }
 
-.contact__inner {
-
+.contact__body {
     @include mq(md) {
         padding-block: rem(80);
+        padding-inline: rem(50);
         box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
     }
 }

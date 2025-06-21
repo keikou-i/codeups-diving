@@ -24,12 +24,6 @@
         max-width: rem(375);
     }
 
-    .inner--contact {
-        @include mq("md") {
-            padding-inline: rem(50);
-        }
-    }
-
     .inner--top-blog {
         max-width: rem(600);
     }

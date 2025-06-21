@@ -4,7 +4,7 @@
     margin-inline: calc(50% - 50cqi); // cqi:水平スクロールバー対策
     position: relative;
     z-index: 1;
-    height: 100vh; // テキストフィードバックによる追加
+    height: 100vh;
 }
 .hero.--campaign,
 .hero.--information {
@@ -12,7 +12,7 @@
 }
 
 .hero__inner {
-    height: 100%; // テキストフィードバックによる追加
+    height: 100%;
 }
 .hero__inner.--campaign,
 .hero__inner.--information {
@@ -24,7 +24,7 @@
     position: absolute;
     z-index: 999;
     width: 100%;
-    height: 100%; // テキストフィードバックによる追加
+    height: 100%;
     aspect-ratio: 375 / 667;
     top: 0;
     left: 0;
@@ -61,13 +61,12 @@
     letter-spacing: rem(21);
     font-weight: $normal;
     color: $accent;
-    padding-inline-start: rem(19); // ピクパ用
+    letter-spacing: 0.54em;
+    text-indent: .54em;
 
     @include mq(md) {
         font-size: rem(80);
         line-height: calc(100 / 80);
-        letter-spacing: rem(42);
-        padding-inline-start: rem(37); // ピクパ用
     }
 }
 
@@ -90,11 +89,11 @@
 }
 
 .hero__swiper-container {
-    height: inherit; // テキストフィードバックによる追加
+    height: inherit;
 }
 
 .hero__swiper {
-    height: inherit; // テキストフィードバックによる追加
+    height: inherit;
 }
 
 .hero__image img {
@@ -112,7 +111,7 @@
 .hero__main-title.--information {
     font-size: rem(40);
     line-height: calc(48 / 40);
-    letter-spacing: rem(0); // TODO
+    letter-spacing: rem(0);
     padding: 0; // リセット
 
     @include mq(md) {
